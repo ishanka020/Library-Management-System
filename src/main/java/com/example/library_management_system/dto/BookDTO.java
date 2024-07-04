@@ -9,6 +9,6 @@ public class BookDTO {
     private String author;
     private String isbn;
     private LocalDate publishedDate;
-    private String genre;
+    private String category;
     private int quantity;
 }
