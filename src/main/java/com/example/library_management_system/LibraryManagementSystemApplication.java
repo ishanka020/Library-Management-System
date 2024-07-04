@@ -1,7 +1,9 @@
 package com.example.library_management_system;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class LibraryManagementSystemApplication {
@@ -10,4 +12,8 @@ public class LibraryManagementSystemApplication {
 		SpringApplication.run(LibraryManagementSystemApplication.class, args);
 	}
 
+	@Bean
+	public ModelMapper ModelMapper() {
+		return new ModelMapper();
+	}
 }
