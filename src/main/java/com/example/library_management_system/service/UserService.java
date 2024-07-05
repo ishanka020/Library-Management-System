@@ -20,7 +20,6 @@ public class UserService {
     public ModelMapper modelMapper;
 
     public User addUser(UserDTO userDto) {
-
         return userRepo.save(modelMapper.map(userDto, User.class));
     }
 

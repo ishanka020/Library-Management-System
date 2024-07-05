@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -32,10 +35,11 @@ public class Book {
     @Column(nullable = false)
     private BookStatus status = BookStatus.AVAILABLE;
 
-//    @OneToMany(mappedBy = "book")
-//    private List<Borrow> borrows;
 
-//    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    private Set<Borrow> borrows;
+
+    //    @OneToMany(mappedBy = "book")
 //    private List<Reservation> reservations;
 
 }
